@@ -1,0 +1,14 @@
+torch
+torchvision
+transformers
+smolagents[transformers]
+
+matplotlib
+seaborn
+
+numpy
+pandas
+scikit-learn
+scipy
+
+datasets

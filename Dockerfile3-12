@@ -12,8 +12,10 @@ RUN curl -LsSf https://astral.sh/uv/install.sh | sh \
     && source $HOME/.local/bin/env \
     && uv self update \
     && uv python install 3.12 \
-    && uv init --python 3.12 \
-    && uv add torch transformers smolagents[transformers]
+    && uv init --python 3.12
+
+COPY requirements.txt .
+RUN uv pip install -f requirements.txt
 
 ENV PATH="/root/.local/bin/:$PATH"
 
